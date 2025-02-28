@@ -15,6 +15,7 @@ This malware detection Software will implement **4 malware detection techniques*
 1. **Successfully implement 3 malware detection techniques**.
 2. **Create a user-friendly interface for the software**.
 3. **Allow for background execution of the software**.
+4. **Allow for cross-platform execution of the software**.
 
 ## Tools
 
