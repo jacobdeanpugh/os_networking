@@ -12,7 +12,7 @@ This malware detection Software will implement **4 malware detection techniques*
 
 ## Objectives
 
-1. **Successfully implement 4 malware detection techniques**.
+1. **Successfully implement 3 malware detection techniques**.
 2. **Create a user-friendly interface for the software**.
 3. **Allow for background execution of the software**.
 
