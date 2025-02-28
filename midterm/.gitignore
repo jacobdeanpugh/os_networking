@@ -1,4 +1,7 @@
 venv
 
-#log 
+#Log Files
 malware_detector.log
+
+#DB Files
+signatures.db
