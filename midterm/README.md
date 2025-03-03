@@ -4,24 +4,67 @@
 
 ### Malware Detection Software
 
-This malware detection Software will implement **4 malware detection techniques**.
+This malware detection Software will implement
 
-1. **Signature-based detection** - This method will include hashing a suspicious file and comparing it to a database of known malware hashes.
-2. **Heuristic-based detection** - This method will include scanning a suspicious file extenstions and names.
-3. **Process-based detection** - This method will include scanning processes running on the system, and checking for any malicious activity.
+**Signature-based detection** - This method will include hashing a suspicious file and comparing it to a database of known malware hashes.
 
-## Objectives
+## User Guide
 
-1. **Successfully implement 3 malware detection techniques**.
-2. **Create a user-friendly interface for the software**.
-3. **Allow for background execution of the software**.
-4. **Allow for cross-platform execution of the software**.
+### Python Package Usage:
 
-## Tools
+To **malware_detector** as a python package, do the following:
 
-1. **Python** - This will be the primary language to implement all malware detection techniques.
-2. **Tkinter** - This will be used to create the user interface for the software.
-3. **PEFile** - This will be used to analyze Portable Executable files.
-4. **PSUtil** - This will be used to analyze processes running on the system.
-5. **Hashlib** - This will be used to hash files for signature-based detection.
-6. **MalwareBazzar** - This will be used to download malware signatures for signature-based detection.
+Setup Python Virtual Enviroment (Linux)
+
+```bash
+# Create virtual enviroment
+python3 -m venv venv
+
+# Activate virtual enviroment
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+Setup Python Virtual Enviroment (Windows)
+
+```bash
+# Create virtual enviroment
+python -m venv venv
+
+#Activate virtual Enviroment
+./venv/scripts/activate
+
+#Install requirements
+
+pip install -r requirements.txt
+```
+
+Access commands using the following
+
+```bash
+# Linux
+python3 malware_dectector -h
+
+# Windows
+python malware_detector -h
+```
+
+To compile python package into executabel use the following
+
+```bash
+pyinstaller --name malware_detector --onefile --add-data "malware_detector/config.yaml:malware_detector" malware_detector/__main__.py
+```
+
+### Binary Executable (exe):
+
+A binary executable of **malware_detector** already exists under `dist/malware_detector`
+
+Commands can be run using the following:
+
+```bash
+./dist/malware_detector -h
+```
+
+The binary file can be moved outside inital directory for use.
