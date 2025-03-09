@@ -51,20 +51,34 @@ python3 malware_dectector -h
 python malware_detector -h
 ```
 
-To compile python package into executabel use the following
+### Command Usage:
+
+Before scanning any files, the database must be initalized
 
 ```bash
-pyinstaller --name malware_detector --onefile --add-data "malware_detector/config.yaml:malware_detector" malware_detector/__main__.py
+malware_detector update
 ```
 
-### Binary Executable (exe):
+To scan a single file:
 
-A binary executable of **malware_detector** already exists under `dist/malware_detector`
+```
+malware_detector scan --file <file_path>
+```
 
-Commands can be run using the following:
+To scan a directory:
 
 ```bash
-./dist/malware_detector -h
+malware_detector scan --directory <directory_path>
 ```
 
-The binary file can be moved outside inital directory for use.
+To scan a directory recursively
+
+```bash
+malware_detector scan --directory <directory_path> --recursive
+```
+
+To scan a zip file:
+
+```
+malware_detector scan --zip <zip_path> --password<Default:none>
+```
